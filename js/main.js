@@ -18,19 +18,55 @@ const names = [
   "Leia Hunter",
 ];
 
+const descriptions = [
+  "A giraffe standing in the middle of a lush green field",
+  "A woman in a bikini holding a surfboard",
+  "A man is standing in front of a mirror",
+];
+
 function getRandomValue(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.ceil(Math.random() * (max - min) + min);
 }
 
-function createMockData(index) {
+function getUniqueID() {
+  const idArr = [];
+  const characters = "abcdefghijklmnopqrstuvwxyz1234567890";
+
+  let uniqueID = "";
+
+  for (let i = 0; i < 10; i++) {
+    uniqueID += characters[getRandomValue(0, characters.length - 1)];
+  }
+
+  idArr.push(uniqueID);
+
+  return uniqueID;
+}
+
+function createMockPostData(index) {
   return {
     id: index + 1,
-    avatar: `img/avatar-${getRandomValue(1, 6)}.svg`,
-    message: comments[Math.floor(Math.random() * comments.length)],
-    name: names[Math.floor(Math.random() * names.length)],
+    url: `photos/${index + 1}.jpg`,
+    description: descriptions[getRandomValue(0, descriptions.length - 1)],
+    likes: getRandomValue(15, 200),
+    comments: createMockCommentData(getRandomValue(1, 5)),
   };
 }
 
+function createMockCommentData(commentQuantity) {
+  const commentsArr = [];
+  for (let i = 0; i < commentQuantity; i++) {
+    commentsArr.push({
+      id: getUniqueID(),
+      avatar: `img/avatar-${getRandomValue(1, 6)}.svg`,
+      message: comments[getRandomValue(0, comments.length - 1)],
+      name: names[getRandomValue(0, names.length - 1)],
+    });
+  }
+
+  return commentsArr;
+}
+
 const mockDataArr = new Array(25).fill(null).map((e, index) => {
-  return (e = createMockData(index));
+  return createMockPostData(index);
 });
