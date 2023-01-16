@@ -29,7 +29,6 @@ function getRandomValue(min, max) {
 }
 
 function getUniqueID() {
-  const idArr = [];
   const characters = "abcdefghijklmnopqrstuvwxyz1234567890";
 
   let uniqueID = "";
@@ -37,8 +36,6 @@ function getUniqueID() {
   for (let i = 0; i < 10; i++) {
     uniqueID += characters[getRandomValue(0, characters.length - 1)];
   }
-
-  idArr.push(uniqueID);
 
   return uniqueID;
 }
