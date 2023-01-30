@@ -1,4 +1,4 @@
-import { parceImage } from "./image-parser.js";
+import { getImages } from "./image-render.js";
 
 const comments = [
   "Все відмінно!",
@@ -70,11 +70,4 @@ const mockDataArr = new Array(25).fill(null).map((e, index) => {
   return createMockPostData(index);
 });
 
-for (let data in mockDataArr) {
-  parceImage(
-    mockDataArr[data].url,
-    mockDataArr[data].likes,
-    mockDataArr[data].comments.length,
-    document.querySelector(".pictures")
-  );
-}
+getImages(mockDataArr);
