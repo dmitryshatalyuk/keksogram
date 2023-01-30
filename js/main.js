@@ -1,3 +1,5 @@
+import { getImages } from "./image-render.js";
+
 const comments = [
   "Все відмінно!",
   "Загалом все непогано. Але не всі.",
@@ -67,3 +69,5 @@ function createMockCommentData(commentQuantity) {
 const mockDataArr = new Array(25).fill(null).map((e, index) => {
   return createMockPostData(index);
 });
+
+getImages(mockDataArr);
