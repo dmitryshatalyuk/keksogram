@@ -1,12 +1,26 @@
 import { getImages } from "./image-render.js";
+import { showFullscreenImage } from "./fullscreen-image.js";
 
 const comments = [
-  "Все відмінно!",
-  "Загалом все непогано. Але не всі.",
-  "Коли ви робите фотографію, добре б прибирати палець із кадру. Зрештою, це просто непрофесійно.",
-  "Моя бабуся випадково чхнула з фотоапаратом у руках і у неї вийшла фотографія краща.",
-  "Я послизнувся на банановій шкірці і впустив фотоапарат на кота і у мене вийшла фотографія краще.",
-  "Обличчя людей на фотці перекошені, ніби їх побивають. Як можна було зловити такий невдалий момент?",
+  "Great post! I learned a lot from it.",
+  "I completely agree with you!",
+  "This is very helpful, thank you for sharing.",
+  "I never thought about it that way before, thanks for the insight.",
+  "Wow, I never knew that. Thanks for sharing!",
+  "This is exactly what I needed, thank you!",
+  "This post really opened my eyes. Thank you!",
+  "I love the way you explain things, keep up the good work!",
+  "I have been looking for information on this topic, thank you!",
+  "This is the best explanation I have seen yet, thank you!",
+  "I really appreciate you taking the time to write this.",
+  "I found this post very informative and well written.",
+  "This post is just what I needed, thank you!",
+  "I have been searching for information like this, thank you!",
+  "This is a great post, I will be sure to share it!",
+  "Thank you for sharing your knowledge and experience.",
+  "I can relate to what you are saying, great post!",
+  "This post has helped me understand the topic better, thank you!",
+  "I am so glad I stumbled upon this post, it is exactly what I needed!",
 ];
 
 const names = [
@@ -21,9 +35,21 @@ const names = [
 ];
 
 const descriptions = [
-  "A giraffe standing in the middle of a lush green field",
-  "A woman in a bikini holding a surfboard",
-  "A man is standing in front of a mirror",
+  "A beautiful sunset over the ocean.",
+  "A scenic hike through the mountains.",
+  "A cute puppy playing in the park.",
+  "A city skyline at night.",
+  "A colorful flower garden.",
+  "A waterfall in the forest.",
+  "A family having a picnic in the park.",
+  "A bird's eye view of the city.",
+  "A group of friends at a concert.",
+  "A snow-covered winter wonderland.",
+  "A stunning beach with crystal clear water.",
+  "A close-up of a beautiful butterfly.",
+  "A hot air balloon ride over the countryside.",
+  "A night sky filled with stars.",
+  "A group of people having a barbecue in the park.",
 ];
 
 function getRandomValue(min, max) {
@@ -71,3 +97,4 @@ const mockDataArr = new Array(25).fill(null).map((e, index) => {
 });
 
 getImages(mockDataArr);
+showFullscreenImage(mockDataArr);
