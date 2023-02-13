@@ -1,5 +1,6 @@
 import { getImages } from "./image-render.js";
 import { showFullscreenImage } from "./fullscreen-image.js";
+import { formValidation } from "./validation.js";
 
 const comments = [
   "Great post! I learned a lot from it.",
@@ -98,3 +99,4 @@ const mockDataArr = new Array(25).fill(null).map((e, index) => {
 
 getImages(mockDataArr);
 showFullscreenImage(mockDataArr);
+formValidation(document.querySelector(".img-upload__form"));
