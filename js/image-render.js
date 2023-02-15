@@ -1,4 +1,4 @@
-export function renderImage(source, likes, comments, id) {
+function renderImage(source, likes, comments, id) {
   const imageTemplate = document.querySelector("#picture");
   const imageTemplateNode = imageTemplate.content.cloneNode(true);
 
