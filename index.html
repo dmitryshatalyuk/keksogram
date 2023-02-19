@@ -127,7 +127,7 @@
 
                 <!-- Додавання хеш-тегів та коментаря до зображення -->
                 <fieldset class="img-upload__text text">
-                  <input class="text__hashtags" name="hashtags" placeholder="#ХэшТег" >
+                  <input class="text__hashtags" name="hashtags" placeholder="#ХэшТег">
                   <textarea class="text__description" name="description" placeholder="Ваш комментарий..."
                     maxlength="140"></textarea>
                 </fieldset>
@@ -235,6 +235,20 @@
   <template id="messages">
     <div class="img-upload__message  img-upload__message--loading">Завантажуємо...</div>
   </template>
+
+
+  <!-- ошибка загрузки -->
+  <!-- <template id="error_msg"> -->
+    <div class="error_msg hidden">
+      <div class="error_msg__content">
+        <p class="error_msg__text">Ошибка загрузки фото из-за отсутствия подключения к интернету</p>
+        <button class="error_msg__close">
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </div>
+  <!-- </template> -->
 
   <!-- Підключення js-->
   <script src="/js/main.js" type="module"></script>

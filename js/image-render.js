@@ -6,6 +6,8 @@ function renderImage(source, likes, comments, id) {
   imageTemplateNode.querySelector(".picture__likes").innerText = likes;
   imageTemplateNode.querySelector(".picture__comments").innerText = comments;
   imageTemplateNode.querySelector(".picture__img").dataset.id = id;
+  imageTemplateNode.querySelector(".picture__img").dataset.commentsCount = comments;
+  
 
   return imageTemplateNode;
 }
