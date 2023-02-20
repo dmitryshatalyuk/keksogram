@@ -132,6 +132,11 @@
                     maxlength="140"></textarea>
                 </fieldset>
 
+                <!-- скрытые поля для отправки на сервер -->
+                <input type="hidden" name="scale" value="100" class="hidden-scale">
+                <input type="hidden" name="filter" value="none" class="hidden-effect">
+
+
                 <!-- Кнопка для отправки данных на сервер -->
                 <button type="submit" class="img-upload__submit" id="upload-submit">Опублікувати</button>
               </div>
@@ -251,6 +256,7 @@
   <!-- </template> -->
 
   <!-- Підключення js-->
+  <script src="/nouislider/nouislider.js"></script>
   <script src="/js/main.js" type="module"></script>
 </body>
 
