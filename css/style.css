@@ -206,6 +206,8 @@ main {
   max-width: auto;
   width: 100%;
   height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .picture__info {
@@ -775,8 +777,14 @@ main {
   transform: translateX(-50%);
 }
 
+/* .big-picture__img {
+  background-color: black;
+} */
+
 .big-picture__img img {
   display: block;
+  /* object-fit: contain; */
+  object-fit: cover;
 }
 
 .social {

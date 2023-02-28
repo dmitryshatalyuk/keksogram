@@ -21,6 +21,10 @@ export function showFullscreenImage(dataArray) {
       bigPictureBox.querySelector(".likes-count").innerText =
         dataArray[postID].likes;
 
+      bigPictureBox.querySelector(".big-picture__img img").style.scale = `${dataArray[postID].scale}%`;
+      bigPictureBox.querySelector(".big-picture__img img").style.filter = `${dataArray[postID].filter}`;
+
+
       // тут
       loadComments(dataArray[postID].comments, bigPictureBox);
       // до сюда

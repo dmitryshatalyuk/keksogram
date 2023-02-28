@@ -101,7 +101,7 @@ function setFilter(name, start, step, rangeMin, rangeMax, unit) {
 
     document.querySelector(
       ".hidden-effect"
-    ).value = `${filterNames[name]}(${val}${unit}}`;
+    ).value = `${filterNames[name]}(${val}${unit})`;
   });
   effectBox.style.display = "block";
 }

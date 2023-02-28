@@ -56,6 +56,8 @@ function createPost(index) {
     url: photos[index].url,
     description: photos[index].description,
     likes: photos[index].likes,
+    scale: photos[index].effects.scale,
+    filter: photos[index].effects.effect,
     comments: createComment(
       getRandomValue(commentsProps.minQuantity, commentsProps.maxQuantity)
     ),
