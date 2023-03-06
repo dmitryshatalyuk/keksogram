@@ -4,9 +4,11 @@ import { showFullscreenImage } from "./fullscreen-image.js";
 import { formValidation } from "./validation.js";
 import { editPicture } from "./pic-effects.js";
 import { sendFormToServer } from "./sendToServer.js";
+import { sortAndFilter } from "./sortAndFilter.js";
 
 editPicture();
 getImages(dataArr);
 showFullscreenImage(dataArr);
 formValidation(document.querySelector(".img-upload__form"));
 sendFormToServer();
+sortAndFilter(dataArr);
